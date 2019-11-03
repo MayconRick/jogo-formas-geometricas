@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="583914 - Maycon Ricardo  |  - Vinicius Martins ">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
+</head>
+ <body>
+    <body onload="start()">
+    <div class="content">
+        <div class="menu">
+            <label>Menu</label>
+
+            <div class="card-menu">
+                <div class="itens card-level">
+                    <label>Dificuldade</label>
+                    <span>Fácil</span>
+                </div>
+    
+                <div class="itens card-round">
+                    <label>Rodadas</label>
+                    <span id="round"></span>
+                </div>
+                <div class="itens card-score">
+                        <label>Pontuação</label>
+                        <span id="score"></span>
+                    </div>
+                <div class="itens card-reset">
+                    <button id="reset" onclick="resetGame()">Reset</button>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="game-background">
+            <label>Formas geométricas</label>
+
+            <div class="game-foreground">
+                <div class="left">
+                    <img  class="generate-img" id="imageoption" title="" src="" />                
+                </div>
+
+                <div class="right">
+                    <div class="form-options">
+                        <img  class="options-img" id="option-1" title="" src="" onclick="verifyWin(this.title)" />       
+                        <img  class="options-img" id="option-2" title="" src="" onclick="verifyWin(this.title)" />       
+                        <img  class="options-img" id="option-3" title="" src="" onclick="verifyWin(this.title)" />       
+                        <img  class="options-img" id="option-4" title="" src="" onclick="verifyWin(this.title)" />       
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <script type="text/javascript" src="js/script.js"></script>
+ </body>
+
+</html>
