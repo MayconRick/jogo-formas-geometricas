@@ -44,7 +44,7 @@
     height: 100px;
     margin: 0 40px;
     cursor: pointer;
-    filter: contrast(175%) brightness(3%);
+    filter: contrast(175%) brightness(85%);
 }
 
 .itens {

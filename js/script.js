@@ -3,6 +3,7 @@ var round = [];
 var formSelected = -1;
 var points = 0;
 var rounds = 0;
+var optionsTitle =  document.getElementById("level").title;
 
 function start() {
 
@@ -13,6 +14,7 @@ function start() {
     roundOptions();
 
 }
+
 async function resetGame() {
     document.getElementById("score").textContent = "";
     document.getElementById("round").textContent = "";
@@ -117,6 +119,10 @@ function score() {
 
    $("#score").text(points);
 
+   if (points == 5) {
+    setLevel(optionsTitle);
+   }
+
 }
 
 function countRound() {
@@ -141,3 +147,18 @@ function verifyWin(id){
     
 }
 
+function setLevel(title){
+    
+    console.log("Passei de 5 pontos" + title);
+
+    if (title == "Facil") {
+        $(".options-img").css("filter","contrast(175%) brightness(3%)")
+        document.getElementById("level").textContent = "Medio";
+        document.getElementById("level").title = "Medio";
+    }
+    if (title == "Medio") {
+        $(".options-img").css("filter","contrast(175%) brightness(85%)")
+        document.getElementById("level").textContent = "Facil";
+        document.getElementById("level").title = "Facil";
+    }
+}
